@@ -1,0 +1,4 @@
+name = "LargeScaleAnalysis"
+uuid = "795b8d18-bbeb-4217-80b2-db63563e71da"
+authors = ["Maxime Mouchet <max@maxmouchet.com>"]
+version = "0.1.0"
