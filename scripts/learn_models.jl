@@ -1,7 +1,6 @@
 import Pkg
 Pkg.activate(@__DIR__)
 
-using CodecZstd
 using ConjugatePriors: NormalInverseChisq
 using Distributions
 using Glob
@@ -9,29 +8,22 @@ using HDPHMM
 using HMMBase
 using JSON
 using Missings
+using ModelsIO
 using ProgressMeter
 using Random
 
 @show Threads.nthreads()
 
-function load_results(file)
-    _, ext = splitext(file)
-    if ext == ".zst"
-        return open(file) do f
-            map(JSON.parse, eachline(ZstdDecompressorStream(f)))
-        end
-    else
-        return open(file) do f
-            map(JSON.parse, eachline(f))
-        end
-    end
-end
-
 function prior(data)
     obs_med, obs_var = robuststats(Normal, data)
+#     tp = TransitionDistributionPrior(
+#         Gamma(1, 1/0.01),
+#         Gamma(1, 1/0.01),
+#         Beta(500, 1)
+#     )
     tp = TransitionDistributionPrior(
-        Gamma(1, 1/0.01),
-        Gamma(1, 1/0.01),
+        Gamma(2, 10),
+        Gamma(100, 10),
         Beta(500, 1)
     )
     op = DPMMObservationModelPrior{Normal}(
@@ -53,7 +45,7 @@ end
 function infer(data; L = 10, LP = 5)
     config = MCConfig(
         init = KMeansInit(L),
-        iter = 200,
+        iter = 250,
         verb = false
     )
     chains = HDPHMM.sample(BlockedSampler(L, LP), prior(data), data, config = config)
@@ -65,28 +57,16 @@ function process(file)
     Random.seed!(2020)
 
     @info "Processing $file"
-    results = load_results(file)
+    results = load(Vector{Dict}, file)
     index, data = prepare(results)
-    seq, hmm = infer(data)
+    # seq, hmm = infer(data)
+    seq, hmm = infer(data, L = 15)
 
     output_file = "$(file).model.json"
-    output = Dict(:index => index, :data => data, :state => seq, :model => hmm)
+    output = DataSegmentationModel(index, seq, hmm, data)
 
     @info "Writing $(output_file)"
     write(output_file, json(output))
-end
-
-function retry(f; retries = 1)
-    n = 0
-    while n < retries
-        try
-            return f(nothing)
-        catch
-            n += 1
-            stacktrace(catch_backtrace())
-        end
-    end
-    nothing
 end
 
 function main(args)
@@ -94,11 +74,16 @@ function main(args)
 
     files = glob("*.ndjson", args[1])
     @show length(files)
-    
+
     p = Progress(length(files))
 
     Threads.@threads for file in files
-        retry(_ -> process(file))
+        try
+            # Retry once, then catch exception
+            retry(process)(file)
+        catch
+            @error stacktrace(catch_backtrace())
+        end
         next!(p)
     end
 end
