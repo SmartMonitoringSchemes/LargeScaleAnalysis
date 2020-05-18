@@ -2,3 +2,6 @@ name = "LargeScaleAnalysis"
 uuid = "795b8d18-bbeb-4217-80b2-db63563e71da"
 authors = ["Maxime Mouchet <max@maxmouchet.com>"]
 version = "0.1.0"
+
+[deps]
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"

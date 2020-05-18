@@ -25,3 +25,4 @@ Manifest.toml
 
 data/ping_v*/*
 data/traceroute_v*/*
+.ipynb_checkpoints
