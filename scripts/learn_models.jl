@@ -1,14 +1,11 @@
 import Pkg
 Pkg.activate(@__DIR__)
 
-using ConjugatePriors: NormalInverseChisq
-using Distributions
 using Glob
 using HDPHMM
-using HMMBase
 using JSON
+using LargeScaleAnalysis
 using Missings
-using ModelsIO
 using ProgressMeter
 using Random
 
@@ -42,31 +39,14 @@ function prepare(results; interval = 240)
     resample_interval(index, data, 240)
 end
 
-function infer(data; L = 10, LP = 5)
-    config = MCConfig(
-        init = KMeansInit(L),
-        iter = 250,
-        verb = false
-    )
-    chains = HDPHMM.sample(BlockedSampler(L, LP), prior(data), data, config = config)
-    result = select_hamming(chains[1])
-    result[2], HMM(result[4], result[2])
-end
-
 function process(file)
     Random.seed!(2020)
-
-    @info "Processing $file"
-    results = load(Vector{Dict}, file)
+    output = "$(file).model.json"
+    @info "Processing $(file) => $(output)"
+    results = parsefile(Vector{Dict}, file)
     index, data = prepare(results)
-    # seq, hmm = infer(data)
-    seq, hmm = infer(data, L = 15)
-
-    output_file = "$(file).model.json"
-    output = DataSegmentationModel(index, seq, hmm, data)
-
-    @info "Writing $(output_file)"
-    write(output_file, json(output))
+    result = segment(index, data, prior(data), L = 15, LP = 5, iter = 250)
+    write(output, json(result))
 end
 
 function main(args)
@@ -81,8 +61,8 @@ function main(args)
         try
             # Retry once, then catch exception
             retry(process)(file)
-        catch
-            @error stacktrace(catch_backtrace())
+        catch e
+            showerror(stderr, e, catch_backtrace())
         end
         next!(p)
     end
