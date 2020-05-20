@@ -13,3 +13,7 @@ PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
 
 [compat]
 CodecZstd = "0.7"
+LightGraphs = "1.3"
+PyCall = "1.91"
+DataStructures = "0.17"
+JSON = "0.21"
