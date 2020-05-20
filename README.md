@@ -1,4 +1,8 @@
 # LargeScaleAnalysis
+
+[![CI](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/workflows/CI/badge.svg)](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/actions?query=workflow%3ACI)
+[![CompatHelper](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/workflows/CompatHelper/badge.svg)](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/actions?query=workflow%3ACompatHelper)
+
 Analysis of RIPE Atlas, CAIDA Manic and Orange WebView measurements.
 
 ```bash
