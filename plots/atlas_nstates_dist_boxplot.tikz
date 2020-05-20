@@ -1,0 +1,158 @@
+% This file was created by tikzplotlib v0.9.1.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.525490196078431,0.8,0.301960784313725}
+
+\begin{axis}[
+height=0.75\linewidth,
+label style={font=\small},
+legend style={nodes={scale=0.8}},
+tick align=outside,
+tick label style={font=\small},
+tick pos=left,
+width=\linewidth,
+x grid style={white!69.0196078431373!black},
+xmin=0.5, xmax=4.5,
+xtick style={color=black},
+xtick={1,2,3,4},
+xticklabels={1 jour, 3 jours, 7 jours, 14 jours},
+y grid style={white!69.0196078431373!black},
+ylabel={Nombre d'états},
+ymin=0, ymax=20,
+ytick style={color=black}
+]
+\addplot [black]
+table {%
+0.774999976158142 1
+1.22500002384186 1
+1.22500002384186 3
+0.774999976158142 3
+0.774999976158142 1
+};
+\addplot [black]
+table {%
+1 1
+1 1
+};
+\addplot [black]
+table {%
+1 3
+1 6
+};
+\addplot [black]
+table {%
+0.887500047683716 1
+1.11249995231628 1
+};
+\addplot [black]
+table {%
+0.887500047683716 6
+1.11249995231628 6
+};
+\addplot [black]
+table {%
+1.77499997615814 2
+2.22499990463257 2
+2.22499990463257 5
+1.77499997615814 5
+1.77499997615814 2
+};
+\addplot [black]
+table {%
+2 2
+2 1
+};
+\addplot [black]
+table {%
+2 5
+2 9
+};
+\addplot [black]
+table {%
+1.88750004768372 1
+2.11249995231628 1
+};
+\addplot [black]
+table {%
+1.88750004768372 9
+2.11249995231628 9
+};
+\addplot [black]
+table {%
+2.77500009536743 4
+3.22499990463257 4
+3.22499990463257 7
+2.77500009536743 7
+2.77500009536743 4
+};
+\addplot [black]
+table {%
+3 4
+3 1
+};
+\addplot [black]
+table {%
+3 7
+3 14
+};
+\addplot [black]
+table {%
+2.88750004768372 1
+3.11249995231628 1
+};
+\addplot [black]
+table {%
+2.88750004768372 14
+3.11249995231628 14
+};
+\addplot [black]
+table {%
+3.77500009536743 6
+4.22499990463257 6
+4.22499990463257 10
+3.77500009536743 10
+3.77500009536743 6
+};
+\addplot [black]
+table {%
+4 6
+4 1
+};
+\addplot [black]
+table {%
+4 10
+4 19
+};
+\addplot [black]
+table {%
+3.88750004768372 1
+4.11250019073486 1
+};
+\addplot [black]
+table {%
+3.88750004768372 19
+4.11250019073486 19
+};
+\addplot [color0]
+table {%
+0.774999976158142 2
+1.22500002384186 2
+};
+\addplot [color0]
+table {%
+1.77499997615814 3
+2.22499990463257 3
+};
+\addplot [color0]
+table {%
+2.77500009536743 5
+3.22499990463257 5
+};
+\addplot [color0]
+table {%
+3.77500009536743 8
+4.22499990463257 8
+};
+\end{axis}
+
+\end{tikzpicture}
