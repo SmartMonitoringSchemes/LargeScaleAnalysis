@@ -39,13 +39,16 @@ function prepare(results; interval = 240)
     resample_interval(index, data, 240)
 end
 
-function process(file)
+function process(file; truncate = nothing)
     Random.seed!(2020)
-    output = "$(file).model.json"
+    output = isnothing(truncate) ? "$(file).model.json" : "$(file)_$(truncate).model.json"
     @info "Processing $(file) => $(output)"
     results = parsefile(Vector{Dict}, file)
     index, data = prepare(results)
-    result = segment(index, data, prior(data), L = 15, LP = 5, iter = 250)
+    if !isnothing(truncate)
+        index, data  = index[1:truncate], data[1:truncate]
+    end
+    result = segment(index, data, prior(data), L = 20, LP = 5, iter = 250)
     write(output, json(result))
 end
 
@@ -55,12 +58,18 @@ function main(args)
     files = glob("*.ndjson", args[1])
     @show length(files)
 
+    truncate = nothing
+    if length(args) > 1
+        truncate = parse(Int, args[2])
+    end
+
     p = Progress(length(files))
 
     Threads.@threads for file in files
+    # for file in files
         try
             # Retry once, then catch exception
-            retry(process)(file)
+            retry(process)(file, truncate = truncate)
         catch e
             showerror(stderr, e, catch_backtrace())
         end
