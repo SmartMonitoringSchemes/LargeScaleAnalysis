@@ -13,3 +13,4 @@ PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
 
 [compat]
 DataStructures = "0.17"
+JSON = "0.21"
