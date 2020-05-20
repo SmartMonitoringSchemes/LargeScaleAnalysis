@@ -10,3 +10,6 @@ HDPHMM = "d69f1d75-0f53-4bd4-8114-76337d5140b8"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+
+[compat]
+JSON = "0.21"
