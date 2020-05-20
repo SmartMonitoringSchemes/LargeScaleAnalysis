@@ -32,12 +32,14 @@ function segments(A::AbstractVector)
     end
 end
 
-segments(model::DataSegmentationModel) = map(s -> maprange(s, model.index), segments(model.state))
-segments(traceroute::LabelledTraceroute) = map(s -> maprange(s, traceroute.index), segments(traceroute.label))
+segments(model::DataSegmentationModel) =
+    map(s -> maprange(s, model.index), segments(model.state))
+segments(traceroute::LabelledTraceroute) =
+    map(s -> maprange(s, traceroute.index), segments(traceroute.label))
 
 function bidirectional_mapping(A, B)
-    mapping_ab = Dict(i => Int[] for i in 1:length(A))
-    mapping_ba = Dict(j => Int[] for j in 1:length(B))
+    mapping_ab = Dict(i => Int[] for i = 1:length(A))
+    mapping_ba = Dict(j => Int[] for j = 1:length(B))
     for (i, a) in enumerate(A), (j, b) in enumerate(B)
         if !isdisjoint(a, b)
             push!(mapping_ab[i], j)

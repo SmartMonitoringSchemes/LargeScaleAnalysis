@@ -10,7 +10,18 @@ using LightGraphs
 import Base: getindex, hasfastin, in, iterate, length, range, reduce, to_index
 import JSON: parsefile
 
-export DataSegmentationModel, LabelledTraceroute, TracerouteRecord, labelize,Segment, group, maprange, segments, parsefile, bidirectional_mapping, AnchoringMesh, measurement_mapping
+export DataSegmentationModel,
+    LabelledTraceroute,
+    TracerouteRecord,
+    labelize,
+    Segment,
+    group,
+    maprange,
+    segments,
+    parsefile,
+    bidirectional_mapping,
+    AnchoringMesh,
+    measurement_mapping
 
 include("backport.jl")
 include("io.jl")

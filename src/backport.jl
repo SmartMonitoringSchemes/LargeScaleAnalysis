@@ -8,8 +8,7 @@ function isdisjoint(l, r)
     function _isdisjoint(l, r)
         hasfastin(r) && return !any(in(r), l)
         hasfastin(l) && return !any(in(l), r)
-        haslength(r) && length(r) < FASTIN_SET_THRESHOLD &&
-            return !any(in(r), l)
+        haslength(r) && length(r) < FASTIN_SET_THRESHOLD && return !any(in(r), l)
         return !any(in(Set(r)), l)
     end
     if haslength(l) && haslength(r) && length(r) < length(l)

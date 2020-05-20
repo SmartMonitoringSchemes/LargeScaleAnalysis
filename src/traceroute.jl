@@ -13,13 +13,22 @@ function TracerouteRecord(d::Dict)
     hops = map(Set{String}, d["hops"])
     hops_asn = map(Set{Int}, d["asn"])
     hops_ix = map(Set{String}, d["ix"])
-    TracerouteRecord(d["timestamp"], d["paris_id"], d["src_addr"], d["dst_addr"], d["from"], hops, hops_asn, hops_ix)
+    TracerouteRecord(
+        d["timestamp"],
+        d["paris_id"],
+        d["src_addr"],
+        d["dst_addr"],
+        d["from"],
+        hops,
+        hops_asn,
+        hops_ix,
+    )
 end
 
 function parsefile(::Type{Vector{TracerouteRecord}}, filename)
     map(TracerouteRecord, parsefile(Vector{Dict}, filename))
 end
-    
+
 # TODO: TracerouteComparator type instead?
 function Base.:≈(a::TracerouteRecord, b::TracerouteRecord)
     # (length(a.hops) != length(b.hops)) && return false
@@ -43,12 +52,12 @@ end
 function labelize(records::Vector{TracerouteRecord})
     # Build graph
     g = SimpleGraph(length(records))
-    for i in 1:length(records)
-        for j in i:length(records)
+    for i = 1:length(records)
+        for j = i:length(records)
             (records[i] ≈ records[j]) && add_edge!(g, i, j)
         end
     end
-    
+
     # Build labelled traceroute
     index = Int[]
     label = Int[]
