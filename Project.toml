@@ -12,5 +12,6 @@ LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
 
 [compat]
+PyCall = "1.91"
 DataStructures = "0.17"
 JSON = "0.21"
