@@ -1,34 +1,38 @@
-module Fetchmesh
-
-using PyCall
-
-export AnchoringMesh, MeasurementType, load_asntree, load_traceroute
-
-const AnchoringMesh = PyNULL()
-const MeasurementType = PyNULL()
-
-function __init__()
-    copy!(AnchoringMesh, pyimport("fetchmesh.mesh").AnchoringMesh)
-    copy!(MeasurementType, pyimport("fetchmesh.meta").MeasurementType)
-
-    py"""
-from fetchmesh.asn import ASNDB
-from fetchmesh.io import AtlasRecordsReader
-from fetchmesh.transformers import TracerouteMapASNTransformer, TracerouteFlatIPTransformer
-
-def load_traceroute(filename, asntree):
-    transformers = [
-        TracerouteMapASNTransformer(asntree),
-        TracerouteFlatIPTransformer(as_set = True, drop_dup = True, drop_late = True, extras_fields = ['asn'], insert_none = False)
-    ]
-    with AtlasRecordsReader(filename, transformers=transformers) as rdr:
-        # Sort is important here!
-        # There is no guarantee that the data is sorted inside the file.
-        return sorted(list(rdr), key=lambda x: x["timestamp"])
-"""
+struct AnchoringMesh
+    data::Vector{Tuple{Dict,Dict}}
+    function AnchoringMesh(data)
+        # Ensure data is sorted (for IterTools.groupby)
+        new(sort(data, by = x -> x[1]["probe"]))
+    end
 end
 
-load_asntree(filename) = py"ASNDB.from_file($filename).radix_tree()"
-load_traceroute(filename, asntree) = py"load_traceroute($filename, $asntree)";
+function parsefile(::Type{AnchoringMesh}, filename)
+    obj = JSON.parsefile(filename)
+    AnchoringMesh(map(Tuple, obj))
+end
 
+function anchor_probe(d::Dict)
+    for tag in d["tags"]
+        if !isnothing(match(r"^\d+$", tag))
+            return parse(Int, tag)
+        end
+    end
+    nothing
+end
+
+# Build a mapping msm_id (type1) => msm_id (type2)
+# TODO: Cleanup this method...
+function measurement_mapping(mesh::AnchoringMesh, af, t1, t2)
+    pairs = []
+    groups = groupby(x -> anchor_probe(x[2]), mesh.data)
+    for group in groups
+        p1, p2 = nothing, nothing
+        for (target, measurement) in group
+            (measurement["af"] != af) && continue
+            (measurement["type"] == t1) && (p1 = measurement["id"])
+            (measurement["type"] == t2) && (p2 = measurement["id"])
+        end
+        !isnothing(p1) && !isnothing(p2) && push!(pairs, (p1, p2))
+    end
+    Dict(pairs)
 end

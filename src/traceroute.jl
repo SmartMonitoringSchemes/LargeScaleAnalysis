@@ -5,13 +5,21 @@ struct TracerouteRecord
     dst_addr::String
     from::String
     hops::Vector{Set{String}}
+    hops_asn::Vector{Set{Int}}
+    hops_ix::Vector{Set{String}}
 end
 
 function TracerouteRecord(d::Dict)
     hops = map(Set{String}, d["hops"])
-    TracerouteRecord(d["timestamp"], d["paris_id"], d["src_addr"], d["dst_addr"], d["from"], hops)
+    hops_asn = map(Set{Int}, d["asn"])
+    hops_ix = map(Set{String}, d["ix"])
+    TracerouteRecord(d["timestamp"], d["paris_id"], d["src_addr"], d["dst_addr"], d["from"], hops, hops_asn, hops_ix)
 end
 
+function parsefile(::Type{Vector{TracerouteRecord}}, filename)
+    map(TracerouteRecord, parsefile(Vector{Dict}, filename))
+end
+    
 # TODO: TracerouteComparator type instead?
 function Base.:≈(a::TracerouteRecord, b::TracerouteRecord)
     # (length(a.hops) != length(b.hops)) && return false

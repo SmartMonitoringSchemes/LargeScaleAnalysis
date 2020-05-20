@@ -4,12 +4,13 @@ using CodecZstd
 using DataStructures
 using JSON
 using HDPHMM
+using IterTools
 using LightGraphs
 
 import Base: getindex, hasfastin, in, iterate, length, range, reduce, to_index
 import JSON: parsefile
 
-export DataSegmentationModel, LabelledTraceroute, TracerouteRecord, labelize,Segment, group, maprange, segments, parsefile, bidirectional_mapping, Fetchmesh
+export DataSegmentationModel, LabelledTraceroute, TracerouteRecord, labelize,Segment, group, maprange, segments, parsefile, bidirectional_mapping, AnchoringMesh, measurement_mapping
 
 include("backport.jl")
 include("io.jl")
