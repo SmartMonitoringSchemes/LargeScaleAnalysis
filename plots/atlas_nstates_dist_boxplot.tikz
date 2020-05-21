@@ -18,7 +18,7 @@ xtick={1,2,3,4},
 xticklabels={1 jour, 3 jours, 7 jours, 14 jours},
 y grid style={white!69.0196078431373!black},
 ylabel={Nombre d'états},
-ymin=0, ymax=20,
+ymin=0, ymax=17,
 ytick style={color=black}
 ]
 \addplot [black]
@@ -93,7 +93,7 @@ table {%
 \addplot [black]
 table {%
 3 7
-3 14
+3 11
 };
 \addplot [black]
 table {%
@@ -102,8 +102,8 @@ table {%
 };
 \addplot [black]
 table {%
-2.88750004768372 14
-3.11249995231628 14
+2.88750004768372 11
+3.11249995231628 11
 };
 \addplot [black]
 table {%
@@ -121,7 +121,7 @@ table {%
 \addplot [black]
 table {%
 4 10
-4 19
+4 16
 };
 \addplot [black]
 table {%
@@ -130,8 +130,8 @@ table {%
 };
 \addplot [black]
 table {%
-3.88750004768372 19
-4.11250019073486 19
+3.88750004768372 16
+4.11250019073486 16
 };
 \addplot [color0]
 table {%
