@@ -1,10 +1,12 @@
 [deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 Glob = "c27321d9-0574-5035-807b-f59d2c89b15c"
 IterTools = "c8e1da08-722c-5040-9ed9-7db0dc04731e"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 LargeScaleAnalysis = "795b8d18-bbeb-4217-80b2-db63563e71da"
 LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
+Pandas = "eadc2687-ae89-51f9-a5d9-86b5a6373a9c"
 ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
 PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
