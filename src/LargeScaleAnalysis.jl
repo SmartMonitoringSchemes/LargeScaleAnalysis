@@ -21,12 +21,16 @@ export DataSegmentationModel,
     parsefile,
     bidirectional_mapping,
     AnchoringMesh,
-    measurement_mapping
+    measurement_mapping,
+    Changepoint,
+    changepoints,
+    closest_multiple
 
 include("backport.jl")
 include("io.jl")
 include("traceroute.jl")
 include("segments.jl")
 include("fetchmesh.jl")
+include("utilities.jl")
 
 end

@@ -1,3 +1,5 @@
+# Segments
+
 struct Segment
     state::Int
     range::UnitRange{Int}
@@ -63,3 +65,19 @@ function reduce(d::Dict{Segment,Vector{Segment}})
     end
     mapping
 end
+
+# Changepoints
+
+struct Changepoint
+    state_before::Int
+    state_after::Int
+    time::Int
+end
+
+function changepoints(segments::Vector{Segment})
+    map(zip(segments[1:end-1], segments[2:end])) do (before, after)
+        Changepoint(before.state, after.state, after.range.start)
+    end
+end
+
+changepoints(x) = changepoints(segments(x))
