@@ -4,7 +4,7 @@
 \definecolor{color0}{rgb}{0.525490196078431,0.8,0.301960784313725}
 
 \begin{axis}[
-height=0.75\linewidth,
+height=0.5\linewidth,
 label style={font=\small},
 legend style={nodes={scale=0.8}},
 tick align=outside,
@@ -12,6 +12,7 @@ tick label style={font=\small},
 tick pos=left,
 width=\linewidth,
 x grid style={white!69.0196078431373!black},
+xmajorgrids,
 xmin=0.5, xmax=4.5,
 xtick style={color=black},
 xtick={1,2,3,4},

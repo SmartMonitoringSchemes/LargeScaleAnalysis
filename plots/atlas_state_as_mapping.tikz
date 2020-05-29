@@ -1,0 +1,92 @@
+% This file was created by tikzplotlib v0.9.1.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0,0.0980392156862745,0.458823529411765}
+
+\begin{groupplot}[group style={group size=2 by 1}]
+\nextgroupplot[
+align=center,
+height=6cm,
+label style={font=\small},
+legend style={nodes={scale=0.8}},
+tick align=outside,
+tick label style={font=\small},
+tick pos=left,
+title={Nombre d'états\\associés à \(\displaystyle x\) chemins AS},
+width=0.5\linewidth,
+x grid style={white!69.0196078431373!black},
+xmajorgrids,
+xmin=0.6, xmax=18.5,
+xtick style={color=black},
+y grid style={white!69.0196078431373!black},
+ymajorgrids,
+ymin=0, ymax=4126,
+ytick style={color=black}
+]
+\draw[draw=none,fill=color0] (axis cs:0.6,0) rectangle (axis cs:1.4,4126);
+\draw[draw=none,fill=color0] (axis cs:1.6,0) rectangle (axis cs:2.4,2106);
+\draw[draw=none,fill=color0] (axis cs:2.6,0) rectangle (axis cs:3.4,764);
+\draw[draw=none,fill=color0] (axis cs:3.6,0) rectangle (axis cs:4.4,651);
+\draw[draw=none,fill=color0] (axis cs:4.6,0) rectangle (axis cs:5.4,266);
+\draw[draw=none,fill=color0] (axis cs:5.6,0) rectangle (axis cs:6.4,183);
+\draw[draw=none,fill=color0] (axis cs:6.6,0) rectangle (axis cs:7.4,106);
+\draw[draw=none,fill=color0] (axis cs:7.6,0) rectangle (axis cs:8.4,94);
+\draw[draw=none,fill=color0] (axis cs:8.6,0) rectangle (axis cs:9.4,48);
+\draw[draw=none,fill=color0] (axis cs:9.6,0) rectangle (axis cs:10.4,24);
+\draw[draw=none,fill=color0] (axis cs:10.6,0) rectangle (axis cs:11.4,21);
+\draw[draw=none,fill=color0] (axis cs:11.6,0) rectangle (axis cs:12.4,13);
+\draw[draw=none,fill=color0] (axis cs:12.6,0) rectangle (axis cs:13.4,13);
+\draw[draw=none,fill=color0] (axis cs:13.6,0) rectangle (axis cs:14.4,11);
+\draw[draw=none,fill=color0] (axis cs:14.6,0) rectangle (axis cs:15.4,10);
+\draw[draw=none,fill=color0] (axis cs:15.6,0) rectangle (axis cs:16.4,2);
+\draw[draw=none,fill=color0] (axis cs:16.6,0) rectangle (axis cs:17.4,2);
+\draw[draw=none,fill=color0] (axis cs:17.6,0) rectangle (axis cs:18.4,4);
+\draw[draw=none,fill=color0] (axis cs:18.6,0) rectangle (axis cs:19.4,0);
+\draw[draw=none,fill=color0] (axis cs:19.6,0) rectangle (axis cs:20.4,3);
+\draw[draw=none,fill=color0] (axis cs:20.6,0) rectangle (axis cs:21.4,3);
+\draw[draw=none,fill=color0] (axis cs:21.6,0) rectangle (axis cs:22.4,2);
+\draw[draw=none,fill=color0] (axis cs:22.6,0) rectangle (axis cs:23.4,0);
+\draw[draw=none,fill=color0] (axis cs:23.6,0) rectangle (axis cs:24.4,0);
+\draw[draw=none,fill=color0] (axis cs:24.6,0) rectangle (axis cs:25.4,1);
+\draw[draw=none,fill=color0] (axis cs:25.6,0) rectangle (axis cs:26.4,0);
+\draw[draw=none,fill=color0] (axis cs:26.6,0) rectangle (axis cs:27.4,1);
+\draw[draw=none,fill=color0] (axis cs:27.6,0) rectangle (axis cs:28.4,0);
+\draw[draw=none,fill=color0] (axis cs:28.6,0) rectangle (axis cs:29.4,0);
+\draw[draw=none,fill=color0] (axis cs:29.6,0) rectangle (axis cs:30.4,0);
+\draw[draw=none,fill=color0] (axis cs:30.6,0) rectangle (axis cs:31.4,1);
+
+\nextgroupplot[
+align=center,
+height=6cm,
+label style={font=\small},
+legend style={nodes={scale=0.8}},
+tick align=outside,
+tick label style={font=\small},
+tick pos=left,
+title={Nombre de chemins AS\\associés à \(\displaystyle x\) états},
+width=0.5\linewidth,
+x grid style={white!69.0196078431373!black},
+xmajorgrids,
+xmin=0.6, xmax=12,
+xtick style={color=black},
+y grid style={white!69.0196078431373!black},
+ymajorgrids,
+ymin=0, ymax=3250,
+ytick style={color=black}
+]
+\draw[draw=none,fill=color0] (axis cs:0.6,0) rectangle (axis cs:1.4,3250);
+\draw[draw=none,fill=color0] (axis cs:1.6,0) rectangle (axis cs:2.4,1046);
+\draw[draw=none,fill=color0] (axis cs:2.6,0) rectangle (axis cs:3.4,778);
+\draw[draw=none,fill=color0] (axis cs:3.6,0) rectangle (axis cs:4.4,568);
+\draw[draw=none,fill=color0] (axis cs:4.6,0) rectangle (axis cs:5.4,452);
+\draw[draw=none,fill=color0] (axis cs:5.6,0) rectangle (axis cs:6.4,357);
+\draw[draw=none,fill=color0] (axis cs:6.6,0) rectangle (axis cs:7.4,289);
+\draw[draw=none,fill=color0] (axis cs:7.6,0) rectangle (axis cs:8.4,138);
+\draw[draw=none,fill=color0] (axis cs:8.6,0) rectangle (axis cs:9.4,96);
+\draw[draw=none,fill=color0] (axis cs:9.6,0) rectangle (axis cs:10.4,46);
+\draw[draw=none,fill=color0] (axis cs:10.6,0) rectangle (axis cs:11.4,17);
+\draw[draw=none,fill=color0] (axis cs:11.6,0) rectangle (axis cs:12.4,3);
+\draw[draw=none,fill=color0] (axis cs:12.6,0) rectangle (axis cs:13.4,4);
+\end{groupplot}
+
+\end{tikzpicture}

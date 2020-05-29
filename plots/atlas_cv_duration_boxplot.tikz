@@ -1,0 +1,391 @@
+% This file was created by tikzplotlib v0.9.1.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.525490196078431,0.8,0.301960784313725}
+
+\begin{axis}[
+height=0.5\linewidth,
+label style={font=\small},
+legend style={nodes={scale=0.8}},
+tick align=outside,
+tick label style={font=\small},
+tick pos=left,
+width=\linewidth,
+x grid style={white!69.0196078431373!black},
+xlabel={Coefficient de variation},
+xmajorgrids,
+xmin=0.5, xmax=11.5,
+xtick style={color=black},
+xtick={1,2,3,4,5,6,7,8,9,10,11},
+xticklabels={0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2},
+y grid style={white!69.0196078431373!black},
+ylabel={Durée moyenne (minutes)},
+ymin=-10, ymax=310,
+ytick style={color=black}
+]
+\addplot [black]
+table {%
+0.75 13
+1.25 13
+1.25 125.5
+0.75 125.5
+0.75 13
+};
+\addplot [black]
+table {%
+1 13
+1 1
+};
+\addplot [black]
+table {%
+1 125.5
+1 294.25
+};
+\addplot [black]
+table {%
+0.875 1
+1.125 1
+};
+\addplot [black]
+table {%
+0.875 294.25
+1.125 294.25
+};
+\addplot [black]
+table {%
+1.75 4
+2.25 4
+2.25 15.8139200210571
+1.75 15.8139200210571
+1.75 4
+};
+\addplot [black]
+table {%
+2 4
+2 1
+};
+\addplot [black]
+table {%
+2 15.8139200210571
+2 33.1538467407227
+};
+\addplot [black]
+table {%
+1.875 1
+2.125 1
+};
+\addplot [black]
+table {%
+1.875 33.1538467407227
+2.125 33.1538467407227
+};
+\addplot [black]
+table {%
+2.75 4
+3.25 4
+3.25 14
+2.75 14
+2.75 4
+};
+\addplot [black]
+table {%
+3 4
+3 1
+};
+\addplot [black]
+table {%
+3 14
+3 28.6666660308838
+};
+\addplot [black]
+table {%
+2.875 1
+3.125 1
+};
+\addplot [black]
+table {%
+2.875 28.6666660308838
+3.125 28.6666660308838
+};
+\addplot [black]
+table {%
+3.75 3.18055558204651
+4.25 3.18055558204651
+4.25 12
+3.75 12
+3.75 3.18055558204651
+};
+\addplot [black]
+table {%
+4 3.18055558204651
+4 1
+};
+\addplot [black]
+table {%
+4 12
+4 24.8888893127441
+};
+\addplot [black]
+table {%
+3.875 1
+4.125 1
+};
+\addplot [black]
+table {%
+3.875 24.8888893127441
+4.125 24.8888893127441
+};
+\addplot [black]
+table {%
+4.75 4.10714292526245
+5.25 4.10714292526245
+5.25 11
+4.75 11
+4.75 4.10714292526245
+};
+\addplot [black]
+table {%
+5 4.10714292526245
+5 1
+};
+\addplot [black]
+table {%
+5 11
+5 19
+};
+\addplot [black]
+table {%
+4.875 1
+5.125 1
+};
+\addplot [black]
+table {%
+4.875 19
+5.125 19
+};
+\addplot [black]
+table {%
+5.75 3.75
+6.25 3.75
+6.25 13.75
+5.75 13.75
+5.75 3.75
+};
+\addplot [black]
+table {%
+6 3.75
+6 1
+};
+\addplot [black]
+table {%
+6 13.75
+6 26.25
+};
+\addplot [black]
+table {%
+5.875 1
+6.125 1
+};
+\addplot [black]
+table {%
+5.875 26.25
+6.125 26.25
+};
+\addplot [black]
+table {%
+6.75 5.17857122421265
+7.25 5.17857122421265
+7.25 16.4500007629395
+6.75 16.4500007629395
+6.75 5.17857122421265
+};
+\addplot [black]
+table {%
+7 5.17857122421265
+7 1.66666662693024
+};
+\addplot [black]
+table {%
+7 16.4500007629395
+7 25
+};
+\addplot [black]
+table {%
+6.875 1.66666662693024
+7.125 1.66666662693024
+};
+\addplot [black]
+table {%
+6.875 25
+7.125 25
+};
+\addplot [black]
+table {%
+7.75 5.75
+8.25 5.75
+8.25 13.3500003814697
+7.75 13.3500003814697
+7.75 5.75
+};
+\addplot [black]
+table {%
+8 5.75
+8 2.20000004768372
+};
+\addplot [black]
+table {%
+8 13.3500003814697
+8 21.1666660308838
+};
+\addplot [black]
+table {%
+7.875 2.20000004768372
+8.125 2.20000004768372
+};
+\addplot [black]
+table {%
+7.875 21.1666660308838
+8.125 21.1666660308838
+};
+\addplot [black]
+table {%
+8.75 5.25
+9.25 5.25
+9.25 24.875
+8.75 24.875
+8.75 5.25
+};
+\addplot [black]
+table {%
+9 5.25
+9 2.79999995231628
+};
+\addplot [black]
+table {%
+9 24.875
+9 43
+};
+\addplot [black]
+table {%
+8.875 2.79999995231628
+9.125 2.79999995231628
+};
+\addplot [black]
+table {%
+8.875 43
+9.125 43
+};
+\addplot [black]
+table {%
+9.75 5.375
+10.25 5.375
+10.25 11.5
+9.75 11.5
+9.75 5.375
+};
+\addplot [black]
+table {%
+10 5.375
+10 2
+};
+\addplot [black]
+table {%
+10 11.5
+10 17.25
+};
+\addplot [black]
+table {%
+9.875 2
+10.125 2
+};
+\addplot [black]
+table {%
+9.875 17.25
+10.125 17.25
+};
+\addplot [black]
+table {%
+10.75 9.30000019073486
+11.25 9.30000019073486
+11.25 16.9166660308838
+10.75 16.9166660308838
+10.75 9.30000019073486
+};
+\addplot [black]
+table {%
+11 9.30000019073486
+11 3
+};
+\addplot [black]
+table {%
+11 16.9166660308838
+11 17.3333339691162
+};
+\addplot [black]
+table {%
+10.875 3
+11.125 3
+};
+\addplot [black]
+table {%
+10.875 17.3333339691162
+11.125 17.3333339691162
+};
+\addplot [color0]
+table {%
+0.75 37.8333320617676
+1.25 37.8333320617676
+};
+\addplot [color0]
+table {%
+1.75 8.23636341094971
+2.25 8.23636341094971
+};
+\addplot [color0]
+table {%
+2.75 7.88888883590698
+3.25 7.88888883590698
+};
+\addplot [color0]
+table {%
+3.75 7.57142877578735
+4.25 7.57142877578735
+};
+\addplot [color0]
+table {%
+4.75 6.91666650772095
+5.25 6.91666650772095
+};
+\addplot [color0]
+table {%
+5.75 6.57499980926514
+6.25 6.57499980926514
+};
+\addplot [color0]
+table {%
+6.75 8.5
+7.25 8.5
+};
+\addplot [color0]
+table {%
+7.75 7.5
+8.25 7.5
+};
+\addplot [color0]
+table {%
+8.75 11.6607141494751
+9.25 11.6607141494751
+};
+\addplot [color0]
+table {%
+9.75 8.16666698455811
+10.25 8.16666698455811
+};
+\addplot [color0]
+table {%
+10.75 11.5
+11.25 11.5
+};
+\end{axis}
+
+\end{tikzpicture}
