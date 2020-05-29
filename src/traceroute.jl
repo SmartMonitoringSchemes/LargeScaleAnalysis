@@ -30,9 +30,9 @@ function parsefile(::Type{Vector{TracerouteRecord}}, filename)
 end
 
 # TODO: TracerouteComparator type instead?
-function Base.:≈(a::TracerouteRecord, b::TracerouteRecord)
-    # (length(a.hops) != length(b.hops)) && return false
-    for (x, y) in zip(a.hops, b.hops)
+function traceroute_eq(a, b)
+    # (length(a) != length(b)) && return false
+    for (x, y) in zip(a, b)
         # ! If we have one record with [set(), set(), set(), ...]
         # then all records will be equal...
         # (isempty(x) || isempty(y)) && continue
@@ -49,12 +49,14 @@ struct LabelledTraceroute
 end
 
 # TODO: Optimize
-function labelize(records::Vector{TracerouteRecord})
+function labelize(records::Vector{TracerouteRecord}, field = :hops)
     # Build graph
     g = SimpleGraph(length(records))
     for i = 1:length(records)
         for j = i:length(records)
-            (records[i] ≈ records[j]) && add_edge!(g, i, j)
+            if traceroute_eq(getfield(records[i], field), getfield(records[j], field))
+                add_edge!(g, i, j)
+            end
         end
     end
 
