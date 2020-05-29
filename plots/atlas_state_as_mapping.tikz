@@ -20,40 +20,70 @@ xmin=0.6, xmax=18.5,
 xtick style={color=black},
 y grid style={white!69.0196078431373!black},
 ymajorgrids,
-ymin=0, ymax=4126,
+ymin=0, ymax=42817,
 ytick style={color=black}
 ]
-\draw[draw=none,fill=color0] (axis cs:0.6,0) rectangle (axis cs:1.4,4126);
-\draw[draw=none,fill=color0] (axis cs:1.6,0) rectangle (axis cs:2.4,2106);
-\draw[draw=none,fill=color0] (axis cs:2.6,0) rectangle (axis cs:3.4,764);
-\draw[draw=none,fill=color0] (axis cs:3.6,0) rectangle (axis cs:4.4,651);
-\draw[draw=none,fill=color0] (axis cs:4.6,0) rectangle (axis cs:5.4,266);
-\draw[draw=none,fill=color0] (axis cs:5.6,0) rectangle (axis cs:6.4,183);
-\draw[draw=none,fill=color0] (axis cs:6.6,0) rectangle (axis cs:7.4,106);
-\draw[draw=none,fill=color0] (axis cs:7.6,0) rectangle (axis cs:8.4,94);
-\draw[draw=none,fill=color0] (axis cs:8.6,0) rectangle (axis cs:9.4,48);
-\draw[draw=none,fill=color0] (axis cs:9.6,0) rectangle (axis cs:10.4,24);
-\draw[draw=none,fill=color0] (axis cs:10.6,0) rectangle (axis cs:11.4,21);
-\draw[draw=none,fill=color0] (axis cs:11.6,0) rectangle (axis cs:12.4,13);
-\draw[draw=none,fill=color0] (axis cs:12.6,0) rectangle (axis cs:13.4,13);
-\draw[draw=none,fill=color0] (axis cs:13.6,0) rectangle (axis cs:14.4,11);
-\draw[draw=none,fill=color0] (axis cs:14.6,0) rectangle (axis cs:15.4,10);
-\draw[draw=none,fill=color0] (axis cs:15.6,0) rectangle (axis cs:16.4,2);
-\draw[draw=none,fill=color0] (axis cs:16.6,0) rectangle (axis cs:17.4,2);
-\draw[draw=none,fill=color0] (axis cs:17.6,0) rectangle (axis cs:18.4,4);
-\draw[draw=none,fill=color0] (axis cs:18.6,0) rectangle (axis cs:19.4,0);
-\draw[draw=none,fill=color0] (axis cs:19.6,0) rectangle (axis cs:20.4,3);
-\draw[draw=none,fill=color0] (axis cs:20.6,0) rectangle (axis cs:21.4,3);
-\draw[draw=none,fill=color0] (axis cs:21.6,0) rectangle (axis cs:22.4,2);
-\draw[draw=none,fill=color0] (axis cs:22.6,0) rectangle (axis cs:23.4,0);
-\draw[draw=none,fill=color0] (axis cs:23.6,0) rectangle (axis cs:24.4,0);
-\draw[draw=none,fill=color0] (axis cs:24.6,0) rectangle (axis cs:25.4,1);
-\draw[draw=none,fill=color0] (axis cs:25.6,0) rectangle (axis cs:26.4,0);
-\draw[draw=none,fill=color0] (axis cs:26.6,0) rectangle (axis cs:27.4,1);
-\draw[draw=none,fill=color0] (axis cs:27.6,0) rectangle (axis cs:28.4,0);
-\draw[draw=none,fill=color0] (axis cs:28.6,0) rectangle (axis cs:29.4,0);
-\draw[draw=none,fill=color0] (axis cs:29.6,0) rectangle (axis cs:30.4,0);
-\draw[draw=none,fill=color0] (axis cs:30.6,0) rectangle (axis cs:31.4,1);
+\draw[draw=none,fill=color0] (axis cs:0.6,0) rectangle (axis cs:1.4,42817);
+\draw[draw=none,fill=color0] (axis cs:1.6,0) rectangle (axis cs:2.4,22433);
+\draw[draw=none,fill=color0] (axis cs:2.6,0) rectangle (axis cs:3.4,7795);
+\draw[draw=none,fill=color0] (axis cs:3.6,0) rectangle (axis cs:4.4,6350);
+\draw[draw=none,fill=color0] (axis cs:4.6,0) rectangle (axis cs:5.4,2606);
+\draw[draw=none,fill=color0] (axis cs:5.6,0) rectangle (axis cs:6.4,1700);
+\draw[draw=none,fill=color0] (axis cs:6.6,0) rectangle (axis cs:7.4,1118);
+\draw[draw=none,fill=color0] (axis cs:7.6,0) rectangle (axis cs:8.4,1032);
+\draw[draw=none,fill=color0] (axis cs:8.6,0) rectangle (axis cs:9.4,494);
+\draw[draw=none,fill=color0] (axis cs:9.6,0) rectangle (axis cs:10.4,340);
+\draw[draw=none,fill=color0] (axis cs:10.6,0) rectangle (axis cs:11.4,216);
+\draw[draw=none,fill=color0] (axis cs:11.6,0) rectangle (axis cs:12.4,160);
+\draw[draw=none,fill=color0] (axis cs:12.6,0) rectangle (axis cs:13.4,132);
+\draw[draw=none,fill=color0] (axis cs:13.6,0) rectangle (axis cs:14.4,115);
+\draw[draw=none,fill=color0] (axis cs:14.6,0) rectangle (axis cs:15.4,90);
+\draw[draw=none,fill=color0] (axis cs:15.6,0) rectangle (axis cs:16.4,95);
+\draw[draw=none,fill=color0] (axis cs:16.6,0) rectangle (axis cs:17.4,44);
+\draw[draw=none,fill=color0] (axis cs:17.6,0) rectangle (axis cs:18.4,28);
+\draw[draw=none,fill=color0] (axis cs:18.6,0) rectangle (axis cs:19.4,23);
+\draw[draw=none,fill=color0] (axis cs:19.6,0) rectangle (axis cs:20.4,21);
+\draw[draw=none,fill=color0] (axis cs:20.6,0) rectangle (axis cs:21.4,20);
+\draw[draw=none,fill=color0] (axis cs:21.6,0) rectangle (axis cs:22.4,10);
+\draw[draw=none,fill=color0] (axis cs:22.6,0) rectangle (axis cs:23.4,10);
+\draw[draw=none,fill=color0] (axis cs:23.6,0) rectangle (axis cs:24.4,10);
+\draw[draw=none,fill=color0] (axis cs:24.6,0) rectangle (axis cs:25.4,8);
+\draw[draw=none,fill=color0] (axis cs:25.6,0) rectangle (axis cs:26.4,13);
+\draw[draw=none,fill=color0] (axis cs:26.6,0) rectangle (axis cs:27.4,11);
+\draw[draw=none,fill=color0] (axis cs:27.6,0) rectangle (axis cs:28.4,12);
+\draw[draw=none,fill=color0] (axis cs:28.6,0) rectangle (axis cs:29.4,3);
+\draw[draw=none,fill=color0] (axis cs:29.6,0) rectangle (axis cs:30.4,5);
+\draw[draw=none,fill=color0] (axis cs:30.6,0) rectangle (axis cs:31.4,6);
+\draw[draw=none,fill=color0] (axis cs:31.6,0) rectangle (axis cs:32.4,4);
+\draw[draw=none,fill=color0] (axis cs:32.6,0) rectangle (axis cs:33.4,4);
+\draw[draw=none,fill=color0] (axis cs:33.6,0) rectangle (axis cs:34.4,3);
+\draw[draw=none,fill=color0] (axis cs:34.6,0) rectangle (axis cs:35.4,3);
+\draw[draw=none,fill=color0] (axis cs:35.6,0) rectangle (axis cs:36.4,2);
+\draw[draw=none,fill=color0] (axis cs:36.6,0) rectangle (axis cs:37.4,1);
+\draw[draw=none,fill=color0] (axis cs:37.6,0) rectangle (axis cs:38.4,1);
+\draw[draw=none,fill=color0] (axis cs:38.6,0) rectangle (axis cs:39.4,2);
+\draw[draw=none,fill=color0] (axis cs:39.6,0) rectangle (axis cs:40.4,2);
+\draw[draw=none,fill=color0] (axis cs:40.6,0) rectangle (axis cs:41.4,2);
+\draw[draw=none,fill=color0] (axis cs:41.6,0) rectangle (axis cs:42.4,0);
+\draw[draw=none,fill=color0] (axis cs:42.6,0) rectangle (axis cs:43.4,1);
+\draw[draw=none,fill=color0] (axis cs:43.6,0) rectangle (axis cs:44.4,0);
+\draw[draw=none,fill=color0] (axis cs:44.6,0) rectangle (axis cs:45.4,1);
+\draw[draw=none,fill=color0] (axis cs:45.6,0) rectangle (axis cs:46.4,0);
+\draw[draw=none,fill=color0] (axis cs:46.6,0) rectangle (axis cs:47.4,2);
+\draw[draw=none,fill=color0] (axis cs:47.6,0) rectangle (axis cs:48.4,0);
+\draw[draw=none,fill=color0] (axis cs:48.6,0) rectangle (axis cs:49.4,1);
+\draw[draw=none,fill=color0] (axis cs:49.6,0) rectangle (axis cs:50.4,0);
+\draw[draw=none,fill=color0] (axis cs:50.6,0) rectangle (axis cs:51.4,1);
+\draw[draw=none,fill=color0] (axis cs:51.6,0) rectangle (axis cs:52.4,0);
+\draw[draw=none,fill=color0] (axis cs:52.6,0) rectangle (axis cs:53.4,1);
+\draw[draw=none,fill=color0] (axis cs:53.6,0) rectangle (axis cs:54.4,0);
+\draw[draw=none,fill=color0] (axis cs:54.6,0) rectangle (axis cs:55.4,0);
+\draw[draw=none,fill=color0] (axis cs:55.6,0) rectangle (axis cs:56.4,1);
+\draw[draw=none,fill=color0] (axis cs:56.6,0) rectangle (axis cs:57.4,1);
+\draw[draw=none,fill=color0] (axis cs:57.6,0) rectangle (axis cs:58.4,0);
+\draw[draw=none,fill=color0] (axis cs:58.6,0) rectangle (axis cs:59.4,1);
+\draw[draw=none,fill=color0] (axis cs:59.6,0) rectangle (axis cs:60.4,0);
+\draw[draw=none,fill=color0] (axis cs:60.6,0) rectangle (axis cs:61.4,1);
 
 \nextgroupplot[
 align=center,
@@ -71,22 +101,27 @@ xmin=0.6, xmax=12,
 xtick style={color=black},
 y grid style={white!69.0196078431373!black},
 ymajorgrids,
-ymin=0, ymax=3250,
+ymin=0, ymax=33860,
 ytick style={color=black}
 ]
-\draw[draw=none,fill=color0] (axis cs:0.6,0) rectangle (axis cs:1.4,3250);
-\draw[draw=none,fill=color0] (axis cs:1.6,0) rectangle (axis cs:2.4,1046);
-\draw[draw=none,fill=color0] (axis cs:2.6,0) rectangle (axis cs:3.4,778);
-\draw[draw=none,fill=color0] (axis cs:3.6,0) rectangle (axis cs:4.4,568);
-\draw[draw=none,fill=color0] (axis cs:4.6,0) rectangle (axis cs:5.4,452);
-\draw[draw=none,fill=color0] (axis cs:5.6,0) rectangle (axis cs:6.4,357);
-\draw[draw=none,fill=color0] (axis cs:6.6,0) rectangle (axis cs:7.4,289);
-\draw[draw=none,fill=color0] (axis cs:7.6,0) rectangle (axis cs:8.4,138);
-\draw[draw=none,fill=color0] (axis cs:8.6,0) rectangle (axis cs:9.4,96);
-\draw[draw=none,fill=color0] (axis cs:9.6,0) rectangle (axis cs:10.4,46);
-\draw[draw=none,fill=color0] (axis cs:10.6,0) rectangle (axis cs:11.4,17);
-\draw[draw=none,fill=color0] (axis cs:11.6,0) rectangle (axis cs:12.4,3);
-\draw[draw=none,fill=color0] (axis cs:12.6,0) rectangle (axis cs:13.4,4);
+\draw[draw=none,fill=color0] (axis cs:0.6,0) rectangle (axis cs:1.4,33860);
+\draw[draw=none,fill=color0] (axis cs:1.6,0) rectangle (axis cs:2.4,11441);
+\draw[draw=none,fill=color0] (axis cs:2.6,0) rectangle (axis cs:3.4,7996);
+\draw[draw=none,fill=color0] (axis cs:3.6,0) rectangle (axis cs:4.4,6259);
+\draw[draw=none,fill=color0] (axis cs:4.6,0) rectangle (axis cs:5.4,4902);
+\draw[draw=none,fill=color0] (axis cs:5.6,0) rectangle (axis cs:6.4,3662);
+\draw[draw=none,fill=color0] (axis cs:6.6,0) rectangle (axis cs:7.4,2467);
+\draw[draw=none,fill=color0] (axis cs:7.6,0) rectangle (axis cs:8.4,1605);
+\draw[draw=none,fill=color0] (axis cs:8.6,0) rectangle (axis cs:9.4,861);
+\draw[draw=none,fill=color0] (axis cs:9.6,0) rectangle (axis cs:10.4,485);
+\draw[draw=none,fill=color0] (axis cs:10.6,0) rectangle (axis cs:11.4,258);
+\draw[draw=none,fill=color0] (axis cs:11.6,0) rectangle (axis cs:12.4,111);
+\draw[draw=none,fill=color0] (axis cs:12.6,0) rectangle (axis cs:13.4,50);
+\draw[draw=none,fill=color0] (axis cs:13.6,0) rectangle (axis cs:14.4,23);
+\draw[draw=none,fill=color0] (axis cs:14.6,0) rectangle (axis cs:15.4,8);
+\draw[draw=none,fill=color0] (axis cs:15.6,0) rectangle (axis cs:16.4,3);
+\draw[draw=none,fill=color0] (axis cs:16.6,0) rectangle (axis cs:17.4,3);
+\draw[draw=none,fill=color0] (axis cs:17.6,0) rectangle (axis cs:18.4,2);
 \end{groupplot}
 
 \end{tikzpicture}

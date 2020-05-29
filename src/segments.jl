@@ -26,18 +26,19 @@ function group(segments::Vector{Segment})
     groups
 end
 
-function segments(A::AbstractVector)
+function segments(A::AbstractVector; closed = false)
     idxs = findall(A[2:end] .!= A[1:end-1])
     idxs = vcat([0], idxs, [length(A)])
     map(zip(idxs[1:end-1] .+ 1, idxs[2:end])) do (start, stop)
+        closed && (stop < idxs[end]) && (stop += 1)
         Segment(A[start], start:stop)
     end
 end
 
-segments(model::DataSegmentationModel) =
-    map(s -> maprange(s, model.index), segments(model.state))
-segments(traceroute::LabelledTraceroute) =
-    map(s -> maprange(s, traceroute.index), segments(traceroute.label))
+segments(model::DataSegmentationModel; kwargs...) =
+    map(s -> maprange(s, model.index), segments(model.state; kwargs...))
+segments(traceroute::LabelledTraceroute; kwargs...) =
+    map(s -> maprange(s, traceroute.index), segments(traceroute.label; kwargs...))
 
 function bidirectional_mapping(A, B)
     mapping_ab = Dict(i => Int[] for i = 1:length(A))
