@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/workflows/CI/badge.svg)](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/actions?query=workflow%3ACI)
 [![CompatHelper](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/workflows/CompatHelper/badge.svg)](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/actions?query=workflow%3ACompatHelper)
+[![codecov](https://codecov.io/gh/SmartMonitoringSchemes/LargeScaleAnalysis/branch/master/graph/badge.svg?token=y6czEJl29S)](https://codecov.io/gh/SmartMonitoringSchemes/LargeScaleAnalysis)
 
 Analysis of RIPE Atlas, CAIDA Manic and Orange WebView measurements.
 
