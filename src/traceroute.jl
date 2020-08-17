@@ -35,8 +35,8 @@ function traceroute_eq(a, b)
     for (x, y) in zip(a, b)
         # ! If we have one record with [set(), set(), set(), ...]
         # then all records will be equal...
-        # (isempty(x) || isempty(y)) && continue
-        (isempty(x) && isempty(y)) && continue
+        (isempty(x) || isempty(y)) && continue
+#         (isempty(x) && isempty(y)) && continue
         isdisjoint(x, y) && return false
     end
     true
