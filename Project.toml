@@ -13,7 +13,7 @@ LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
 
 [compat]
 CodecZstd = "0.7"
-DataStructures = "0.17"
+DataStructures = "0.17, 0.18"
 HDPHMM = "0.9.6"
 JSON = "0.21"
 LightGraphs = "1.3"
