@@ -1,0 +1,6 @@
+# Run this file with `bash traceroute_v4_1580511600_1580513400_noself_fullmesh.meta`.
+# Generated on 2020-05-22 13:48:31.816128.
+# Command that generated this file:
+# fetchmesh fetch --af 4 --type traceroute --start-date 2020-02-01T00:00:00 --stop-date 2020-02-01T00:30:00 --save-pairs --jobs 8 --no-self --dir traceroute_v4_1580511600_1580513400_noself_fullmesh --sample-pairs 1.0
+# Command to fetch the results:
+fetchmesh fetch --af 4 --type traceroute --start-date 2020-02-01T00:00:00 --stop-date 2020-02-01T00:30:00 --jobs 8 --no-self --dir traceroute_v4_1580511600_1580513400_noself_fullmesh --load-pairs traceroute_v4_1580511600_1580513400_noself_fullmesh.pairs
