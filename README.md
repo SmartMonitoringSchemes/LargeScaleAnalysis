@@ -6,12 +6,15 @@
 
 Analysis of RIPE Atlas, CAIDA Manic and Orange WebView measurements.
 
-```bash
-fetchmesh fetch --af 4 --type ping --start-date 2020-02-01 --stop-date 2020-02-08 --dry-run --sample-pairs 0.01 --half --no-self --save-pairs mesh_half_noself_001.pairs --jobs 4
-fetchmesh fetch --af 4 --type ping --start-date 2020-02-01 --stop-date 2020-02-08 --dry-run --only-self --save-pairs mesh_self.pairs --jobs 4
+## Notebooks
 
-fetchmesh fetch --af 4 --type ping --start-date 2020-02-01 --stop-date 2020-02-08 --load-pairs mesh_half_noself_001.pairs --jobs 4 --dir ping_v4_1580511600_1581116400_noself
-fetchmesh fetch --af 4 --type traceroute --start-date 2020-02-01 --stop-date 2020-02-08 --load-pairs mesh_half_noself_001.pairs --jobs 4 --dir ping_v4_1580511600_1581116400_self
-fetchmesh unpack --af 4 --type ping ping_v4_1580511600_1581116400_noself ping_v4_1580511600_1581116400_noself_pairs
-fetchmesh unpack --af 4 --type ping ping_v4_1580511600_1581116400_self ping_v4_1580511600_1581116400_self_pairs
-```
+Name | Description
+:----|:-----------
+[Atlas AMS-IX 2015](/noteboks/Atlas_AMS-IX_2015.ipynb) | Study of AMS-IX outage on the 13th of May 2015.
+[Atlas DE-CIX 2018](/notebooks/Atlas_DE-CIX_2018.ipynb) | Study of DE-CIX Frankfurt outage on the 9-10th of April 2018.
+[Atlas Delay](/notebooks/Atlas_Delay.ipynb) | Statistics on the distribution of the delay, states, ... in RIPE Atlas data.
+[Atlas Durations Distribution](/notebooks/Atlas_Durations_Distribution.ipynb) | Statistics on the distribution of sojourn times.
+[Atlas Mesh Counts](/notebooks/Atlas_Mesh_Counts.ipynb) | AS/IXP counts in RIPE Atlas data.
+[Atlas Traceroutes](/notebooks/Atlas_Traceroutes.ipynb) | Mapping between states and AS/IP paths.
+[CAIDA MANIC](/notebooks/CAIDA_MANIC.ipynb) | Plots of CAIDA MANIC data.
+[Orange Web View](/notebooks/Orange_Web_View.ipynb) | Plots of Orange Web View data.
