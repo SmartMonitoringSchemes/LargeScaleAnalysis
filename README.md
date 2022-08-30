@@ -1,8 +1,7 @@
 # LargeScaleAnalysis
 
-[![CI](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/workflows/CI/badge.svg)](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/actions?query=workflow%3ACI)
-[![CompatHelper](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/workflows/CompatHelper/badge.svg)](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/actions?query=workflow%3ACompatHelper)
-[![codecov](https://codecov.io/gh/SmartMonitoringSchemes/LargeScaleAnalysis/branch/master/graph/badge.svg?token=y6czEJl29S)](https://codecov.io/gh/SmartMonitoringSchemes/LargeScaleAnalysis)
+[![Coverage](https://img.shields.io/codecov/c/github/SmartMonitoringSchemes/LargeScaleAnalysis?logo=codecov&logoColor=white)](https://app.codecov.io/gh/SmartMonitoringSchemes/LargeScaleAnalysis)
+[![Tests](https://img.shields.io/github/workflow/status/SmartMonitoringSchemes/LargeScaleAnalysis/Tests?logo=github&label=tests)](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/actions/workflows/tests.yml)
 
 Analysis of RIPE Atlas, CAIDA Manic and Orange WebView measurements.
 
@@ -10,7 +9,7 @@ Analysis of RIPE Atlas, CAIDA Manic and Orange WebView measurements.
 
 Name | Description
 :----|:-----------
-[Atlas AMS-IX 2015](/noteboks/Atlas_AMS-IX_2015.ipynb) | Study of AMS-IX outage on the 13th of May 2015.
+[Atlas AMS-IX 2015](/notebooks/Atlas_AMS-IX_2015.ipynb) | Study of AMS-IX outage on the 13th of May 2015.
 [Atlas DE-CIX 2018](/notebooks/Atlas_DE-CIX_2018.ipynb) | Study of DE-CIX Frankfurt outage on the 9-10th of April 2018.
 [Atlas Delay](/notebooks/Atlas_Delay.ipynb) | Statistics on the distribution of the delay, states, ... in RIPE Atlas data.
 [Atlas Durations Distribution](/notebooks/Atlas_Durations_Distribution.ipynb) | Statistics on the distribution of sojourn times.
