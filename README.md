@@ -1,7 +1,7 @@
 # LargeScaleAnalysis
 
 [![Coverage](https://img.shields.io/codecov/c/github/SmartMonitoringSchemes/LargeScaleAnalysis?logo=codecov&logoColor=white)](https://app.codecov.io/gh/SmartMonitoringSchemes/LargeScaleAnalysis)
-[![Tests](https://img.shields.io/github/workflow/status/SmartMonitoringSchemes/LargeScaleAnalysis/Tests?logo=github&label=tests)](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/actions/workflows/tests.yml)
+[![Tests](https://img.shields.io/github/actions/workflow/status/SmartMonitoringSchemes/LargeScaleAnalysis/tests.yml?logo=github&label=tests)](https://github.com/SmartMonitoringSchemes/LargeScaleAnalysis/actions/workflows/tests.yml)
 
 Analysis of RIPE Atlas, CAIDA Manic and Orange WebView measurements.
 
